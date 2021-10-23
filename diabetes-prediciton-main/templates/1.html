@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+
+        <body style="background-color:lightblue;">
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 style="color:DeepPink" class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
+            <div  style="color:LightSlateGrey" class='description'>
+                <p>A Machine Learning Model with an accuracy of 79% <br><br><br></p> 
+            </div>
+        </div>
+        <center><img src="https://i.pinimg.com/originals/b3/70/5c/b3705cc2edf8f527789e6e2be29f6267.gif" height="300"></center><br><br>
+        
+        <!-- Text Area -->
+    	<div class="ml-container"; style="text-align: center">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input size=30 class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+                <input size=30 class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 78"><br>
+                <input size=30 class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 85"><br>
+                <input size=30 class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 18"><br>
+                <input size=30 class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 85"><br>
+                <input size=30 class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 24"><br>
+                <input size=30 class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.55"><br>
+                <input size=30 class="form-input" type="text" name="age" placeholder="Age (years) eg. 30"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+  
+    <!-- Footer -->
+       <div style="background-color:gold;text-align: center;" class='footer'>
+           <div style="color:Gold" class="contact">
+            <p><a href="http://www.linkedin.com/in/yashkhanna1498"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/yashkhanna1498"><i class="fa fa-github fa-2x"></i></a></p>
+           </div>
+           <p  style="color:green" class='footer-description'>Made for fun in lockdown<br> ©2020 Yash Khanna</p>
+       </div>
+
+    </body>
+</html>
